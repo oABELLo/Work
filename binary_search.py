@@ -9,7 +9,7 @@ def binary_search(l,  target, low=None, high=None):
 
     midpoint = (len(l)) // 2
 
-    if l[midpoint] == rtarget:
+    if l[midpoint] == target:
         return midpoint
     elif target < l[midpoint]:
         return binary_search(l, target, low, midpoint-1)
