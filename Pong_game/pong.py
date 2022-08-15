@@ -1,5 +1,5 @@
 import turtle
-import os
+#import os
 
 window = turtle.Screen()
 window.title("Pong")
